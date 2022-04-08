@@ -2,8 +2,22 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useState } from 'react'
 
 const Home: NextPage = () => {
+  const [searchQuery, setSearchQuery] = useState(""); 
+
+  function handleSearchBarChange(event: any) {
+    setSearchQuery (event.target.value); 
+  }
+
+  function handleSearchSubmit(event: any) {
+    event.preventDefault(); 
+    if (searchQuery.toLowerCase() === "help"){
+      window.location.pathname = "/helpResources";
+    }
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,10 +30,10 @@ const Home: NextPage = () => {
       <div className={styles.header}>
           <a href="#default" className={styles.logo}><img src="logo.png" width={190} height={70}/></a>
           <div className={styles.header_right}>
-            <div className={styles.search}>
-              <input className={styles.search_bar} type="text" placeholder="Search.." name="search" />
-              <button className={styles.search_button} type="submit"><img src="search.png" width={20} height={20}/></button>
-            </div>
+              <form className={styles.search} onClick={handleSearchSubmit}>
+                <input className={styles.search_bar} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange}/>
+                <button className={styles.search_button} type="submit"><img src="search.png" width={20} height={20}/></button>
+              </form>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
             <a href="#about">More Recipes</a>
