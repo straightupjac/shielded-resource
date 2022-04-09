@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+main {
+  min-height: 100vh;
+  margin-top: 4em;
+  padding: 4rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
