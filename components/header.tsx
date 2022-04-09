@@ -66,7 +66,7 @@ const Header = () => {
                   <Link passHref href="/about">
                     <span className={styles.link}>About</span>
                   </Link>
-                  <Link passHref href="/#more">
+                  <Link passHref href="/more">
                     <span className={styles.link}>More Recipes</span>
                   </Link>
                 </Stack>
