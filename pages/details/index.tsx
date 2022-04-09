@@ -4,7 +4,11 @@ import styles from '@styles/details.module.css'
 import QuickLeaveButton from '@components/quickLeaveButton'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
 
 const HelpResources: NextPage = () => {
     const visitedBeforeKey = "freshmealhelpvisited"
