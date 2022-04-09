@@ -1,12 +1,17 @@
 .quick_leave_button {
-    color: white; 
+    color: white;
     cursor: pointer;
     background-color: red;
     border: none;
     width: 240px;
-    height: 100px;
-    display:inline-block;
+    height: 120px;
+    display: inline-block;
     border-radius: 5px;
+}
+
+.quick_leave_button_container {
+    position: relative;
+    float: right;
 }
 
 .leave_text {
@@ -14,17 +19,17 @@
     padding-top: 7px;
     cursor: pointer;
     font-size: 30px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     color: black;
-    font-weight: 700; 
+    font-weight: 700;
     letter-spacing: .3rem;
 }
 
 .description_box {
     cursor: pointer;
     color: black;
-    display: flex; 
+    display: flex;
     justify-content: center;
     background-color: white;
     margin-top: 6px;
