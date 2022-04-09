@@ -1,12 +1,7 @@
-import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Stack from "@mui/material/Stack";
-import HideOnScroll from "@components/hideOnScroll";
 import styles from '@styles/header.module.css';
-import { useState } from 'react'
 import Link from "next/link";
-import { useRouter } from 'next/router'
 
 export const navLinks = [
   { title: 'home', path: '/' },
@@ -14,16 +9,10 @@ export const navLinks = [
 ];
 
 const PrivacyNavBar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const history = useRouter();
-
   return (
     <>
       <Toolbar
         component="nav"
-        sx={{
-          display: { xs: `none`, md: `flex` },
-        }}
       >
         <Stack direction="row" spacing={4} alignItems="center">
           <Link passHref href="/details">

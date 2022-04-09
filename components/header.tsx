@@ -9,6 +9,7 @@ import { useState } from 'react'
 import Link from "next/link";
 import { Button } from "@mui/material";
 import { useRouter } from 'next/router'
+import SideDrawer from "./SideDrawer";
 
 export const navLinks = [
   { title: 'home', path: '/' },
@@ -45,6 +46,7 @@ const Header = () => {
                   <Image alt="fresh meal logo" src="/logo.png" width={190} height={70} />
                 </Button>
               </Link>
+              {/* for desktop view */}
               <Toolbar
                 component="nav"
                 sx={{
@@ -69,6 +71,12 @@ const Header = () => {
                   </Link>
                 </Stack>
               </Toolbar>
+              {/* for mobile view */}
+              <SideDrawer
+                handleSearchSubmit={handleSearchSubmit}
+                handleSearchBarChange={handleSearchBarChange}
+                searchQuery={searchQuery}
+              />
             </Container>
           </Toolbar>
         </AppBar>
