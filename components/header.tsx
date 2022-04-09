@@ -2,13 +2,13 @@ import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton"
 import HideOnScroll from "@components/hideOnScroll";
 import styles from '@styles/header.module.css';
 import Image from 'next/image';
 import { useState } from 'react'
 import Link from "next/link";
 import { Button } from "@mui/material";
+import { useRouter } from 'next/router'
 
 export const navLinks = [
   { title: 'home', path: '/' },
@@ -17,6 +17,7 @@ export const navLinks = [
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const history = useRouter();
 
   function handleSearchBarChange(event: any) {
     setSearchQuery(event.target.value);
@@ -25,7 +26,7 @@ const Header = () => {
   function handleSearchSubmit(event: any) {
     event.preventDefault();
     if (searchQuery.toLowerCase() === "help") {
-      window.location.pathname = "/details";
+      history.push("/details");
     }
   }
 
