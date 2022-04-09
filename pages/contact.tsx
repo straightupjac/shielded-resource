@@ -16,6 +16,8 @@ const Contact: NextPage = () => {
             Contact <a>FreshMeal</a>
           </Typography>
           <p>
+            We love hearing from our readers! Whether you have a question, comment, or just want to say hi, feel free to drop us a line.
+            <br /> <br />
             Email{' '}
             <code>contact@freshmeal.com</code> :)
           </p>
