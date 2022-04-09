@@ -39,6 +39,9 @@ const PrivacyNavBar = () => {
         }}
       >
         <Stack direction="row" spacing={4} alignItems="center">
+          <Link passHref href="/details">
+            <span className={styles.link}>Resources Home</span>
+          </Link>
           <Link passHref href="/details/manifesto">
             <span className={styles.link}>Manifesto</span>
           </Link>

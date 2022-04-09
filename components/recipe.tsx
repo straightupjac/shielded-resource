@@ -1,11 +1,7 @@
 import React from 'react'
 import styles from '@styles/recipe.module.css'
 import StarIcon from '@mui/icons-material/Star';
-import Image from 'next/image'
-
-type RecipeProps = {
-
-}
+import Image from 'next/image';
 
 function Recipe() {
   return (

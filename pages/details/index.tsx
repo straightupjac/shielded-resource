@@ -22,26 +22,26 @@ const helpResources: NextPage = () => {
                         <Link passHref href='/details/manifesto'>
                             <div className={styles.card}>
                                 <h2>Manifesto &rarr;</h2>
-                                <p>Info yay.</p>
+                                <p>Our motivation behind this project.</p>
                             </div>
                         </Link>
                         <Link passHref href='/details/privacy'>
                             <div className={styles.card}>
                                 <h2>Privacy Resources &rarr;</h2>
-                                <p>Info yay.</p>
+                                <p>How to protect your digital privacy.</p>
                             </div>
                         </Link>
 
                         <Link passHref href='/details/ethical-design'>
                             <div className={styles.card}>
-                                <h2>Ethical Design Plan &rarr;</h2>
-                                <p>Info yay.</p>
+                                <h2>Ethical Design &rarr;</h2>
+                                <p>How we approached the design of this tool.</p>
                             </div>
                         </Link>
                         <Link passHref href='/details/ecosystem'>
                             <div className={styles.card}>
                                 <h2>Ecosystem Research &rarr;</h2>
-                                <p>Info yay.</p>
+                                <p>We researched further resources so you {`don't`} have to.</p>
                             </div>
                         </Link>
                     </div>

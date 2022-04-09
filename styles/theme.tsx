@@ -34,6 +34,9 @@ let theme = createTheme({
         fontSize: '2rem',
       }
     },
+    body1: {
+      fontSize: '1.15rem',
+    }
   },
 });
 
