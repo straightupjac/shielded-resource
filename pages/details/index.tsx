@@ -19,26 +19,26 @@ const helpResources: NextPage = () => {
                 <span className={styles.quick_leave_button_container}> <QuickLeaveButton /> </span>
                 <h1>Help Resources</h1>
                 <div className={styles.grid}>
-                    <Link href='/'>
+                    <Link passHref href='/'>
                         <div className={styles.card}>
                             <h2>Privacy Resources &rarr;</h2>
                             <p>Info yay.</p>
                         </div>
                     </Link>
 
-                    <Link href='/'>
+                    <Link passHref href='/'>
                         <div className={styles.card}>
                             <h2>Ethical Design Plan &rarr;</h2>
                             <p>Info yay.</p>
                         </div>
                     </Link>
-                    <Link href='/'>
+                    <Link passHref href='/'>
                         <div className={styles.card}>
                             <h2>Manifesto &rarr;</h2>
                             <p>Info yay.</p>
                         </div>
                     </Link>
-                    <Link href='/'>
+                    <Link passHref href='/'>
                         <div className={styles.card}>
                             <h2>Ecosystem Research &rarr;</h2>
                             <p>Info yay.</p>
