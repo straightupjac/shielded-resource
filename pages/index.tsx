@@ -2,22 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
 
 const Home: NextPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  function handleSearchBarChange(event: any) {
-    setSearchQuery(event.target.value);
-  }
-
-  function handleSearchSubmit(event: any) {
-    event.preventDefault();
-    if (searchQuery.toLowerCase() === "help") {
-      window.location.pathname = "/details";
-    }
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -25,27 +11,12 @@ const Home: NextPage = () => {
         <meta name="description" content="Quick and easy recipes for the modern family." />
         <link rel="icon" type="image/png" href="small-logo.png" />
       </Head>
-
-
-      <div className={styles.header}>
-        <a href="#default" className={styles.logo}><img src="logo.png" width={190} height={70} /></a>
-        <div className={styles.header_right}>
-          <form className={styles.search} onClick={handleSearchSubmit}>
-            <input className={styles.search_bar} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange} />
-            <button className={styles.search_button} type="submit"><img src="search.png" width={20} height={20} /></button>
-          </form>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-          <a href="#about">More Recipes</a>
-        </div>
-      </div>
-
       <main className={styles.main}>
         <span className={styles.left_col}>
-          <img src="cookie.jpeg" width={500} height={300} />
+          <Image alt="image of a cookie" src="/cookie.jpeg" width={500} height={300} />
           <h1 className={styles.recipe_title}>Ultimate Chocolate Chip Cookies</h1>
           <div className={styles.reviews}>
-            <img src="five-stars.png" width={100} height={20} />
+            <Image alt="image of a five start rating" src="/five-stars.png" width={100} height={10} />
             <p className={styles.review_count}>(1278)</p>
           </div>
         </span>
@@ -53,43 +24,43 @@ const Home: NextPage = () => {
           <h2>Ingredients</h2>
           <ul className={styles.ingredient_list}>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>2 1/4 cups all-purpose flour</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 teaspoon baking soda</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1/2 teaspoon salt</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 cup butter, softened</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>3/4 cup granulated sugar</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>3/4 cup packed brown sugar</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 egg</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 teaspoon vanilla</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>2 cups semisweet chocolate chips</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 cup coarsely chopped nuts, if desired</p>
             </li>
           </ul>
@@ -145,19 +116,6 @@ const Home: NextPage = () => {
           </a>
         </div>
       </main> */}
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

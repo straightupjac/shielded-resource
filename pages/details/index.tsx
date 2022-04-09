@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../../styles/details.module.css'
-import QuickLeaveButton from './quickLeaveButton'
+import styles from '@styles/details.module.css'
+import QuickLeaveButton from '@components/quickLeaveButton'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 

@@ -1,10 +1,9 @@
 .main {
-    min-height: 100vh;
-    padding: 2rem 1rem;
-  }
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
 
-  .quick_leave_button_container {
-    position: relative; 
-    float: right; 
-
-  }
+.quick_leave_button_container {
+  position: relative;
+  float: right;
+}
