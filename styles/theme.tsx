@@ -34,6 +34,16 @@ let theme = createTheme({
         fontSize: '2rem',
       }
     },
+    h2: {
+      fontSize: '3rem',
+      fontWeight: 500,
+      '@media only screen and (max-width: 900px)': {
+        fontSize: '2.5rem',
+      },
+      '@media only screen and (max-width: 600px)': {
+        fontSize: '2rem',
+      }
+    },
     body1: {
       fontSize: '1.15rem',
     }
