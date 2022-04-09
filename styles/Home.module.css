@@ -98,6 +98,8 @@
 
 .ingredient_bullet {
   display: flex;
+  height: 20px;
+  margin: 5px;
 }
 
 .ingredient {
@@ -106,7 +108,7 @@
 }
 
 .steps_list {
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 .step {
@@ -115,13 +117,13 @@
 }
 
 .step::before {
- content: counter(step-counter);
- margin-right: 5px;
- font-size: 80%;
- background-color: #cdeafe;
- font-weight: bold;
- padding: 3px 8px;
- border-radius: 90px;
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #cdeafe;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 90px;
 }
 
 /* css from default page */
@@ -211,4 +213,3 @@
     flex-direction: column;
   }
 } */
-

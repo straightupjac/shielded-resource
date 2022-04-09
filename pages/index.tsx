@@ -28,11 +28,14 @@ const Home: NextPage = () => {
 
 
       <div className={styles.header}>
-        <a href="#default" className={styles.logo}><img src="logo.png" width={190} height={70} /></a>
+        <a href="#default" className={styles.logo}>
+          <Image alt="fresh meal logo" src="/logo.png" width={190} height={70} /></a>
         <div className={styles.header_right}>
           <form className={styles.search} onClick={handleSearchSubmit}>
             <input className={styles.search_bar} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange} />
-            <button className={styles.search_button} type="submit"><img src="search.png" width={20} height={20} /></button>
+            <button className={styles.search_button} type="submit">
+              <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
+            </button>
           </form>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
@@ -42,10 +45,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <span className={styles.left_col}>
-          <img src="cookie.jpeg" width={500} height={300} />
+          <Image alt="image of a cookie" src="/cookie.jpeg" width={500} height={300} />
           <h1 className={styles.recipe_title}>Ultimate Chocolate Chip Cookies</h1>
           <div className={styles.reviews}>
-            <img src="five-stars.png" width={100} height={20} />
+            <Image alt="image of a five start rating" src="/five-stars.png" width={100} height={10} />
             <p className={styles.review_count}>(1278)</p>
           </div>
         </span>
@@ -53,43 +56,43 @@ const Home: NextPage = () => {
           <h2>Ingredients</h2>
           <ul className={styles.ingredient_list}>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>2 1/4 cups all-purpose flour</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 teaspoon baking soda</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1/2 teaspoon salt</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 cup butter, softened</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>3/4 cup granulated sugar</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>3/4 cup packed brown sugar</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 egg</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 teaspoon vanilla</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>2 cups semisweet chocolate chips</p>
             </li>
             <li className={styles.ingredient_bullet}>
-              <img src="bullet-point.png" width={20} height={20} />
+              <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
               <p className={styles.ingredient}>1 cup coarsely chopped nuts, if desired</p>
             </li>
           </ul>
