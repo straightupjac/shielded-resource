@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import styles from '@styles/Home.module.css';
 import Typography from '@mui/material/Typography';
 import { Stack } from "@mui/material";
+import styles from '@styles/footer.module.css'
 
 const Footer = () => {
   return (
@@ -18,10 +18,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Made with 💛
         </a>
         <Typography >
           © {new Date().getFullYear()}

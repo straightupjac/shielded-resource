@@ -24,9 +24,9 @@ let theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontSize: '6rem',
+      fontSize: '4rem',
       fontWeight: 500,
-      color: '#40424a',
+      color: '#137dc5',
       '@media only screen and (max-width: 900px)': {
         fontSize: '3rem',
       },
