@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '@styles/details.module.css'
 import QuickLeaveButton from '@components/quickLeaveButton'
 import Link from 'next/link'
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 
 const helpResources: NextPage = () => {
 
@@ -18,6 +18,11 @@ const helpResources: NextPage = () => {
             <Container>
                 <main className={styles.main}>
                     <h1>Help Resources</h1>
+                    <Typography variant="body1">
+                        If you are seeing this page, you are entrusted to steward this resource and only share it with those that you trust. If you need to exit this page at any point, you can click the {`'leave'`} button and it will bring you back to the recipe app.
+                        <br /> <br />
+                        We hope this resource is able to help someone in need.
+                    </Typography>
                     <div className={styles.grid}>
                         <Link passHref href='/details/manifesto'>
                             <div className={styles.card}>

@@ -26,6 +26,7 @@ const Header = () => {
   function handleSearchSubmit(event: any) {
     event.preventDefault();
     if (searchQuery.toLowerCase() === "help") {
+      setSearchQuery("")
       history.push("/details");
     }
   }
@@ -52,7 +53,7 @@ const Header = () => {
               >
                 <Stack direction="row" spacing={4} alignItems="center">
                   <form className={styles.search} onClick={handleSearchSubmit}>
-                    <input className={styles.search_bar} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange} />
+                    <input className={styles.search_bar} value={searchQuery} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange} />
                     <button className={styles.search_button} type="submit">
                       <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
                     </button>
