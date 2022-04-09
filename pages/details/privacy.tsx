@@ -20,7 +20,7 @@ const Privacy: NextPage = () => {
           <QuickLeaveButton />
           <Stack spacing={2}>
             <Typography variant="h1">
-              Privacy Resources
+              Digital Privacy Resources
             </Typography>
             <Typography variant="h2">
               Why We Need Privacy Tools
@@ -28,7 +28,16 @@ const Privacy: NextPage = () => {
             <Typography variant="body1">
               There are many reasons why people might need privacy tools. Some people may need them to protect their online activity from being tracked, others may need them to communicate securely, and still others may need them to hide their location. Privacy tools can help people to stay safe online, and to keep their information private.
               <br /><br />
-              For our target audience, there are many reasons why domestic violence victims and those seeking abortions may need privacy tools. In both cases, the individuals may be seeking to escape a dangerous or abusive situation, and may need to keep their location and identity confidential in order to stay safe. Additionally, both groups may be subject to stigma and discrimination, and privacy tools can help them avoid judgement and maintain their dignity.
+              There are many reasons why domestic violence victims and those seeking abortions may need privacy tools. Domestic abuse survivors often have to worry about their online safety as well as their physical safety. In both cases, the individuals may be seeking to escape a dangerous or abusive situation, and may need to keep their location and identity confidential in order to stay safe. Additionally, both groups may be subject to stigma and discrimination, and privacy tools can help them avoid judgement and maintain their dignity.
+              One of the best ways to protect yourself online is to make sure your devices are secure. This means creating strong passwords, never sharing passwords with anyone, and being careful about what you post online.
+            </Typography>
+            <Typography variant="body1">
+
+              Additionally, it is important to be aware of the signs that an abuser may be using technology to control or spy on you.
+              Some of these signs include unusual text messages or calls, unexpected bills, and social media posts that seem out of character.
+              If you suspect that your abuser is using technology to control or spy on you, there are steps you can take to protect yourself.
+              You can change your passwords, block numbers and email addresses, and use security features on your devices.
+              You can also reach out to a domestic abuse hotline for help and support.
             </Typography>
             <Typography variant="h3">
               Existing privacy-related solutions and what they do
@@ -133,6 +142,29 @@ const Privacy: NextPage = () => {
                 </li>
                 <li>
                   This leads to a feature recommendation that we do not ask the users ANY questions per se about themselves when they use our tool. There is no need to collect any information about them.
+                </li>
+              </ul>
+            </Typography>
+            <Typography variant="h2">Closing Words</Typography>
+            <Typography variant="body1">
+              Protecting your internet privacy is important regardless of what information you are accessing. We recomend you set strong passwords and use a password manager to manage your password across various accounts. Password managers are important because they allow users to store and manage their passwords in a secure way. Password managers can also help users generate strong passwords and keep track of their passwords.
+            </Typography>
+            <Typography variant="body1">
+              <strong>
+                Key Takeaways:
+              </strong>
+              <ul>
+                <li>
+                  It is important to protect your digital privacy because it helps to prevent identity theft, safeguard your personal information, and maintain your online security.
+                </li>
+                <li>
+                  Identity theft can occur when your personal information is accessed without your permission. This can happen through data breaches, phishing scams, or malware.
+                </li>
+                <li>
+                  Safeguarding your personal information helps to prevent identity theft and maintain your online security. You can do this by using strong passwords, two-factor authentication, and encrypting your data.
+                </li>
+                <li>
+                  Maintaining your online security is important to protect your digital privacy. You can do this by keeping your software up to date, using secure websites, and avoiding public Wi-Fi.
                 </li>
               </ul>
             </Typography>
