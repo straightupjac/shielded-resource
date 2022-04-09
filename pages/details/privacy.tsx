@@ -32,7 +32,6 @@ const Privacy: NextPage = () => {
               One of the best ways to protect yourself online is to make sure your devices are secure. This means creating strong passwords, never sharing passwords with anyone, and being careful about what you post online.
             </Typography>
             <Typography variant="body1">
-
               Additionally, it is important to be aware of the signs that an abuser may be using technology to control or spy on you.
               Some of these signs include unusual text messages or calls, unexpected bills, and social media posts that seem out of character.
               If you suspect that your abuser is using technology to control or spy on you, there are steps you can take to protect yourself.

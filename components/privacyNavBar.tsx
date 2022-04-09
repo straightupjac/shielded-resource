@@ -4,10 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Stack from "@mui/material/Stack";
 import HideOnScroll from "@components/hideOnScroll";
 import styles from '@styles/header.module.css';
-import Image from 'next/image';
 import { useState } from 'react'
 import Link from "next/link";
-import { Button } from "@mui/material";
 import { useRouter } from 'next/router'
 
 export const navLinks = [
@@ -18,17 +16,6 @@ export const navLinks = [
 const PrivacyNavBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const history = useRouter();
-
-  function handleSearchBarChange(event: any) {
-    setSearchQuery(event.target.value);
-  }
-
-  function handleSearchSubmit(event: any) {
-    event.preventDefault();
-    if (searchQuery.toLowerCase() === "help") {
-      history.push("/details");
-    }
-  }
 
   return (
     <>
