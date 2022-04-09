@@ -4,11 +4,11 @@ import { Container, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-const EthicalDesign: NextPage = () => {
+const Manifesto: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Fresh Meal - contact</title>
+        <title>Fresh Meal</title>
         <meta name="description" content="Quick and easy recipes for the modern family." />
         <link rel="icon" type="image/png" href="small-logo.png" />
       </Head>
@@ -17,7 +17,7 @@ const EthicalDesign: NextPage = () => {
           <PrivacyNavBar />
           <QuickLeaveButton />
           <Typography variant="h1">
-            Privacy Resources
+            Manifesto
           </Typography>
           <Typography variant="body1">
             Email{' '}
@@ -29,4 +29,4 @@ const EthicalDesign: NextPage = () => {
   )
 }
 
-export default EthicalDesign;
+export default Manifesto;

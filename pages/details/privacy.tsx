@@ -1,3 +1,4 @@
+import PrivacyNavBar from '@components/privacyNavBar'
 import QuickLeaveButton from '@components/quickLeaveButton'
 import { Container, Typography } from '@mui/material'
 import type { NextPage } from 'next'
@@ -13,6 +14,7 @@ const Privacy: NextPage = () => {
       </Head>
       <Container>
         <main>
+          <PrivacyNavBar />
           <QuickLeaveButton />
           <Typography variant="h1">
             Privacy Resources

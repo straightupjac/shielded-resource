@@ -19,6 +19,12 @@ const helpResources: NextPage = () => {
                     <QuickLeaveButton />
                     <h1>Help Resources</h1>
                     <div className={styles.grid}>
+                        <Link passHref href='/details/manifesto'>
+                            <div className={styles.card}>
+                                <h2>Manifesto &rarr;</h2>
+                                <p>Info yay.</p>
+                            </div>
+                        </Link>
                         <Link passHref href='/details/privacy'>
                             <div className={styles.card}>
                                 <h2>Privacy Resources &rarr;</h2>
@@ -32,12 +38,6 @@ const helpResources: NextPage = () => {
                                 <p>Info yay.</p>
                             </div>
                         </Link>
-                        <Link passHref href='/details/manifesto'>
-                            <div className={styles.card}>
-                                <h2>Manifesto &rarr;</h2>
-                                <p>Info yay.</p>
-                            </div>
-                        </Link>
                         <Link passHref href='/details/ecosystem'>
                             <div className={styles.card}>
                                 <h2>Ecosystem Research &rarr;</h2>
@@ -47,7 +47,7 @@ const helpResources: NextPage = () => {
                     </div>
                 </main>
             </Container>
-        </div>
+        </div >
     )
 }
 
