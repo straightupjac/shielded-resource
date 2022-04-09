@@ -1,4 +1,5 @@
 .quick_leave_button {
+    position: sticky;
     color: white;
     cursor: pointer;
     background-color: red;
@@ -11,8 +12,8 @@
 }
 
 .quick_leave_button_container {
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 20px;
 }
 
 .leave_text {

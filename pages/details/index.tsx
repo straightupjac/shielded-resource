@@ -14,9 +14,9 @@ const helpResources: NextPage = () => {
                 <meta name="description" content="Quick and easy recipes for the modern family." />
                 <link rel="icon" type="image/png" href="small-logo.png" />
             </Head>
+            <QuickLeaveButton />
             <Container>
                 <main className={styles.main}>
-                    <QuickLeaveButton />
                     <h1>Help Resources</h1>
                     <div className={styles.grid}>
                         <Link passHref href='/details/manifesto'>
