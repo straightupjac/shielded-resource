@@ -1,5 +1,5 @@
 .quick_leave_button {
-    position: sticky;
+    position: fixed;
     color: white;
     cursor: pointer;
     background-color: red;
@@ -46,4 +46,23 @@
 .description_text {
     text-align: center;
 
+}
+
+@media (max-width: 600px) {
+    .quick_leave_button {
+        height: 40px;
+        width: 150px;
+    }
+
+    .leave_text {
+        width: 150px;
+        padding-top: 7px;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-weight: 600;
+        letter-spacing: .3rem;
+    }
 }

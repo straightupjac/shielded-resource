@@ -3,6 +3,17 @@
   padding: 2rem 1rem;
 }
 
+.content {
+  width: 60vw;
+}
+
+.escapePanel {
+  position: fixed;
+  top: 40vh;
+  right: 300px;
+  cursor: pointer;
+}
+
 /* css from default page */
 .title a {
   color: #0070f3;
@@ -87,5 +98,11 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .escapePanel {
+    right: 150px;
+    top: 80px;
+    cursor: pointer;
   }
 }

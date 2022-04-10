@@ -4,6 +4,7 @@ import { RouteGuard } from '@components/routeGuard'
 import { Container, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import styles from '@styles/details.module.css'
 
 const Ecosystem: NextPage = () => {
   return (
@@ -14,19 +15,25 @@ const Ecosystem: NextPage = () => {
         <link rel="icon" type="image/png" href="small-logo.png" />
       </Head>
       <RouteGuard>
-        <Container>
-          <main>
-            <PrivacyNavBar />
+        <>
+          <div className={styles.escapePanel}>
             <QuickLeaveButton />
-            <Typography variant="h1">
-              Ecosystem
-            </Typography>
-            <Typography variant="body1">
-              Email{' '}
-              <code>contact@freshmeal.com</code> :)
-            </Typography>
-          </main>
-        </Container>
+          </div>
+          <Container>
+            <main>
+              <PrivacyNavBar />
+              <div className={styles.content}>
+                <Typography variant="h1">
+                  Ecosystem
+                </Typography>
+                <Typography variant="body1">
+                  Email{' '}
+                  <code>contact@freshmeal.com</code> :)
+                </Typography>
+              </div>
+            </main>
+          </Container>
+        </>
       </RouteGuard>
     </>
   )

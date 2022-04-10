@@ -16,11 +16,16 @@ const helpResources: NextPage = () => {
                 <link rel="icon" type="image/png" href="small-logo.png" />
             </Head>
             <RouteGuard>
-                <div className={styles.container}>
-                    <QuickLeaveButton />
+                <>
+                    <div className={styles.escapePanel}>
+                        <QuickLeaveButton />
+                    </div>
                     <Container>
-                        <main className={styles.main}>
-                            <h1>Help Resources</h1>
+                        <main>
+                            <br />
+                            <Typography variant="h1">
+                                Help Resources
+                            </Typography>
                             <Typography variant="body1">
                                 If you are seeing this page, you are entrusted to steward this resource and only share it with those that you trust. If you need to exit this page at any point, you can click the {`'leave'`} button and it will bring you back to the recipe app.
                                 <br /> <br />
@@ -55,7 +60,7 @@ const helpResources: NextPage = () => {
                             </div>
                         </main>
                     </Container>
-                </div >
+                </ >
             </RouteGuard>
         </>
     )
