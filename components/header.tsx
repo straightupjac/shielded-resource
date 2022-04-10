@@ -28,13 +28,13 @@ const Header = () => {
     event.preventDefault();
     if (searchQuery.toLowerCase() === "help") {
       setSearchQuery("")
-      localStorage.setItem('auth', 'true');
+      sessionStorage.setItem('auth', 'true');
       history.push("/details");
     }
   }
 
   const clearAuth = () => {
-    localStorage.removeItem('auth');
+    sessionStorage.removeItem('auth');
   }
 
   return (

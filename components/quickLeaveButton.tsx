@@ -9,7 +9,7 @@ function QuickLeaveButton() {
 
     const handleLeave = () => {
         router.push('/');
-        localStorage.removeItem('auth');
+        sessionStorage.removeItem('auth');
     }
     return (
         <span className={styles.quick_leave_button_container} >
