@@ -23,6 +23,10 @@
   padding-left: 50px;
 }
 
+.left_col {
+  min-width: 40%;
+}
+
 .ingredient_list {
   list-style-type: none;
 }

@@ -3,19 +3,19 @@ import styles from '@styles/recipe.module.css'
 import StarIcon from '@mui/icons-material/Star';
 import Image from 'next/image';
 
-function Recipe() {
+function SalmonRecipe() {
   return (
     <div className={styles.recipeBox}>
       <span className={styles.left_col}>
-        <Image alt="image of a cookie" src="/cookie.jpeg" width={500} height={300} />
-        <h1 className={styles.recipe_title}>Ultimate Chocolate Chip Cookies</h1>
+        <Image alt="image of a salmon and brussel sprouts" src="/salmon.jpeg" width={500} height={300} />
+        <h1 className={styles.recipe_title}>Sheet Pan Roasted Brussels Sprouts and Salmon</h1>
         <div className={styles.reviews}>
           <StarIcon />
           <StarIcon />
           <StarIcon />
           <StarIcon />
           <StarIcon />
-          <p className={styles.review_count}>(1278)</p>
+          <p className={styles.review_count}>(1384)</p>
         </div>
       </span>
       <span className={styles.recipe}>
@@ -23,35 +23,35 @@ function Recipe() {
         <ul className={styles.ingredient_list}>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>2 1/4 cups all-purpose flour</p>
+            <p className={styles.ingredient}>1 lb. Brussels sprouts, trimmed and halved</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>1 teaspoon baking soda</p>
+            <p className={styles.ingredient}>1/2 lb. baby Yukon gold potatoes, halved</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>1/2 teaspoon salt</p>
+            <p className={styles.ingredient}>1/2 lb. wild caught salmon, cut into 4 fillets</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>1 cup butter, softened</p>
+            <p className={styles.ingredient}>1/4 cup olive oil</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>3/4 cup granulated sugar</p>
+            <p className={styles.ingredient}>1/2 teaspoon garlic powder</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>3/4 cup packed brown sugar</p>
+            <p className={styles.ingredient}>1/4 teaspoon sea salt</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>1 egg</p>
+            <p className={styles.ingredient}>1/4 teaspoon black pepper</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
-            <p className={styles.ingredient}>1 teaspoon vanilla</p>
+            <p className={styles.ingredient}>1 lemon, quartered</p>
           </li>
           <li className={styles.ingredient_bullet}>
             <Image alt="a bulllet point" src="/bullet-point.png" width={20} height={20} />
@@ -63,17 +63,10 @@ function Recipe() {
           </li>
         </ul>
         <h2>Steps</h2>
-        <ol className={styles.steps_list}>
-          <li className={styles.step}>Heat oven to 375°F. In small bowl, mix flour, baking soda and salt; set aside.</li>
-          <li className={styles.step}>Beat in egg and vanilla until smooth. Stir in flour mixture just until blended (dough will be stiff).</li>
-          <li className={styles.step}>Stir in chocolate chips and nuts.</li>
-          <li className={styles.step}>Onto ungreased cookie sheets, drop dough by rounded tablespoonfuls 2 inches apart.</li>
-          <li className={styles.step}>Bake 8 to 10 minutes or until light brown (centers will be soft).</li>
-          <li className={styles.step}>Cool 2 minutes; remove from cookie sheet to cooling rack. Cool completely, about 30 minutes.</li>
-        </ol>
+        Preheat oven to 400 degrees. In a large bowl, toss together Brussels sprouts, potatoes, salmon, olive oil, garlic powder, sea salt and black pepper. Transfer to a baking sheet lined with parchment paper. Bake for 20-25 minutes, until potatoes are tender and salmon is cooked through. Squeeze fresh lemon juice over before serving. Enjoy!
       </span>
     </div>
   )
 }
 
-export default Recipe;
+export default SalmonRecipe;
