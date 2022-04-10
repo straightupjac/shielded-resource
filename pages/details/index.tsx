@@ -5,9 +5,9 @@ import QuickLeaveButton from '@components/quickLeaveButton'
 import Link from 'next/link'
 import { Container, Typography } from '@mui/material'
 import { RouteGuard } from '@components/routeGuard'
+import { useEffect } from 'react'
 
-const helpResources: NextPage = () => {
-
+const HelpResources: NextPage = () => {
     return (
         <>
             <Head>
@@ -66,4 +66,4 @@ const helpResources: NextPage = () => {
     )
 }
 
-export default helpResources
+export default HelpResources;

@@ -66,6 +66,17 @@ const EthicalDesign: NextPage = () => {
                 <Typography variant="h2">
                   How we designed this
                 </Typography>
+                <Typography>
+                  We wanted to create a tool that would put user privacy first. To do so, this tool has a couple of features:
+                  <ul>
+                    <li>
+                      This resource section of the site cannot be accessed directly by url (only by the user entering {`'help'`} in the search bar). When a user clicks any item in the main nav bar or the leave button, the authentication cache is cleared and anything in the resources part of the website will not be acessible.
+                    </li>
+                    <li>
+                      To further enhance security, users are given the option to create an OTP (one-time-pass) for the sensitve parts of this site to ensure other users on their device will not accidentally stumble upon it.
+                    </li>
+                  </ul>
+                </Typography>
               </div>
             </Container>
           </main>
