@@ -44,7 +44,12 @@ const HelpResources: NextPage = () => {
                                         <p>How to protect your digital privacy.</p>
                                     </div>
                                 </Link>
-
+                                <Link passHref href='/details/action-items'>
+                                    <div className={styles.card}>
+                                        <h2>Practical Tips &rarr;</h2>
+                                        <p>Action items to ensure your safety</p>
+                                    </div>
+                                </Link>
                                 <Link passHref href='/details/ethical-design'>
                                     <div className={styles.card}>
                                         <h2>Ethical Design &rarr;</h2>

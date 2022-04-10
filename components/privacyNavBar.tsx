@@ -30,6 +30,9 @@ const PrivacyNavBar = () => {
           <Link passHref href="/details/privacy">
             <span className={styles.link}>Privacy Resources</span>
           </Link>
+          <Link passHref href="/details/action-items">
+            <span className={styles.link}>Action Items</span>
+          </Link>
           <Link passHref href="/details/ethical-design">
             <span className={styles.link}>Ethical Design Plan</span>
           </Link>
