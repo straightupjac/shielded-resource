@@ -28,8 +28,13 @@ const Header = () => {
     event.preventDefault();
     if (searchQuery.toLowerCase() === "help") {
       setSearchQuery("")
+      localStorage.setItem('auth', 'true');
       history.push("/details");
     }
+  }
+
+  const clearAuth = () => {
+    localStorage.removeItem('auth');
   }
 
   return (
@@ -42,7 +47,7 @@ const Header = () => {
               sx={{ display: `flex`, justifyContent: `space-between`, alignItems: 'center' }}
             >
               <Link passHref href="/">
-                <Button>
+                <Button onClick={clearAuth}>
                   <Image alt="fresh meal logo" src="/logo.png" width={190} height={70} />
                 </Button>
               </Link>
@@ -61,13 +66,19 @@ const Header = () => {
                     </button>
                   </form>
                   <Link passHref href="/contact">
-                    <span className={styles.link}>Contact</span>
+                    <span className={styles.link} onClick={clearAuth}>
+                      Contact
+                    </span>
                   </Link>
                   <Link passHref href="/about">
-                    <span className={styles.link}>About</span>
+                    <span className={styles.link} onClick={clearAuth}>
+                      About
+                    </span>
                   </Link>
                   <Link passHref href="/more">
-                    <span className={styles.link}>More Recipes</span>
+                    <span className={styles.link} onClick={clearAuth}>
+                      More Recipes
+                    </span>
                   </Link>
                 </Stack>
               </Toolbar>
