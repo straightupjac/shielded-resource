@@ -4,17 +4,35 @@ import styles from '@styles/details.module.css'
 import QuickLeaveButton from '@components/quickLeaveButton'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import Dialog from '@mui/material/Dialog'
-import DialogActions from '@mui/material/DialogActions'
-import DialogContent from '@mui/material/DialogContent'
-import DialogContentText from '@mui/material/DialogContentText'
-import DialogTitle from '@mui/material/DialogTitle'
-import { Container } from '@mui/material'
+import { Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button } from '@mui/material'
+import ReactCodeInput from 'react-code-input'
 
 const HelpResources: NextPage = () => {
     const visitedBeforeKey = "freshmealhelpvisited"
     const passcodeKey = "freshmealpasscode"
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false)
+    const [openCodeDialog, setOpenCodeDialog] = useState(false)
+    const [firstTimeCode, setFirstTimeCode] = useState("")
+    const [alertDialogMessage, setAlertDialogMessage] = useState("")
+    const [openAlertDialog, setOpenAlertDialog] = useState(false)
+
+    function closeCodeDialog() {
+        setOpenCodeDialog(false)
+    }
+
+    function savePasscode() {
+        closeCodeDialog()
+        if (firstTimeCode == null) return
+        try {
+            localStorage.setItem(passcodeKey, firstTimeCode)
+            localStorage.setItem(visitedBeforeKey, "true")
+            setAlertDialogMessage("On your next visit, you will be shown a 404 page. Just type in your code on the keyboard to be granted access, no prompts will be shown to signal this to keep the page&rsquo;s real content a secret.")
+        } catch (error) {
+            localStorage.removeItem(visitedBeforeKey)
+            setAlertDialogMessage("We couldn't save your code. Please try again.")
+        }
+        setOpenAlertDialog(true)
+    }
 
     useEffect(function() {
         if(window.localStorage.getItem(visitedBeforeKey) == "true") {
@@ -32,16 +50,7 @@ const HelpResources: NextPage = () => {
                 window.removeEventListener('keydown', eventListener)
             }
         } else {
-            const promptMessage = "To be able to access this page in subsequent visits, you need to set a 6 digit number-only code."
-            let passCode = prompt(promptMessage)
-            if (passCode == null) return
-            try {
-                localStorage.setItem(passcodeKey, passCode)
-                localStorage.setItem(visitedBeforeKey, "true")
-                alert("On your next visit, you will be shown a 404 page. Just type in your code on the keyboard to be granted access, no prompts will be shown to signal this to keep the page's real content a secret.")
-            } catch (error) {
-                alert("Sorry, could not save your code. Please try again.")
-            }
+            setOpenCodeDialog(true)
         }
     },[loaded]);
 
@@ -85,6 +94,29 @@ const HelpResources: NextPage = () => {
                     </div>
                 </main>
             </Container>
+            <Dialog open={openCodeDialog} onClose={closeCodeDialog}>
+                <DialogTitle>Setup a 6-digit access Code</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                    To be able to access this page in subsequent visits, you need to set a 6 digit number-only code.
+                    </DialogContentText>
+                    <ReactCodeInput type='number' fields={6} inputMode='verbatim' name='passcodefield' onChange={(value) => setFirstTimeCode(value) } />
+                </DialogContent>
+                <DialogActions>
+                <Button onClick={savePasscode}>Save</Button>
+                </DialogActions>
+            </Dialog>
+            <Dialog open={openAlertDialog} onClose={() => setOpenAlertDialog(false)}>
+                <DialogTitle>Access to Fresh Meal</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                    { alertDialogMessage }
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                <Button onClick={() => setOpenAlertDialog(false)}>Okay</Button>
+                </DialogActions>
+            </Dialog>
         </div >
     )
 }
