@@ -16,6 +16,7 @@ const HelpResources: NextPage = () => {
     const [firstTimeCode, setFirstTimeCode] = useState("")
     const [alertDialogMessage, setAlertDialogMessage] = useState("")
     const [openAlertDialog, setOpenAlertDialog] = useState(false)
+    const [authenticated, setAuthenticated] = useState(false)
 
     function closeCodeDialog() {
         setOpenCodeDialog(false)
@@ -27,7 +28,7 @@ const HelpResources: NextPage = () => {
         try {
             localStorage.setItem(passcodeKey, firstTimeCode)
             localStorage.setItem(visitedBeforeKey, "true")
-            setAlertDialogMessage("On your next visit, you will be shown a 404 page. Just type in your code on the keyboard to be granted access, no prompts will be shown to signal this to keep the page&rsquo;s real content a secret.")
+            setAlertDialogMessage("On your next visit, you will be shown a 404 page. Just type in your code on the keyboard to be granted access. No prompts will be shown to signal this to keep the page's real content a secret.")
         } catch (error) {
             localStorage.removeItem(visitedBeforeKey)
             setAlertDialogMessage("We couldn't save your code. Please try again.")
@@ -43,7 +44,7 @@ const HelpResources: NextPage = () => {
                 if (savedCode == null) return
                 codeUntilNow = codeUntilNow.concat(e.key)
                 if (codeUntilNow.length >= 6 && codeUntilNow.endsWith(savedCode)) {
-                    console.log("let them through pls")
+                    setAuthenticated(true)
                 }
             }
             window.addEventListener('keydown', eventListener)
@@ -51,6 +52,7 @@ const HelpResources: NextPage = () => {
                 window.removeEventListener('keydown', eventListener)
             }
         } else {
+            setAuthenticated(true)
             setOpenCodeDialog(true)
         }
     },[loaded]);
@@ -62,6 +64,7 @@ const HelpResources: NextPage = () => {
                 <meta name="description" content="Quick and easy recipes for the modern family." />
                 <link rel="icon" type="image/png" href="small-logo.svg" />
             </Head>
+            {authenticated ? 
             <RouteGuard>
                 <>
                     <div className={styles.escapePanel}>
@@ -136,7 +139,16 @@ const HelpResources: NextPage = () => {
                         </DialogActions>
                     </Dialog>
                 </ >
-            </RouteGuard>
+            </RouteGuard> 
+            : 
+            <> 
+            <Container onLoad={ () => setLoaded(true) }>
+                <main>
+                    <br/>
+                    <b>Error 404:</b> The link seems to be broken or we are experiencing server issues.
+                </main>
+            </Container>
+            </> }
         </>
     )
     
