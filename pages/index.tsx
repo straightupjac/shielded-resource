@@ -52,7 +52,14 @@ const Home: NextPage = () => {
             Recipes for everyday
           </Typography>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} textColor="primary">
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              textColor="primary"
+              variant="scrollable"
+              scrollButtons
+              allowScrollButtonsMobile
+            >
               <Tab label="Ultimate Chocolate Chip Cookies" {...a11yProps(0)} />
               <Tab label="Sheet Pan Roasted Brussels Sprouts and Salmon" {...a11yProps(1)} />
               <Tab label="30-min Pizza" {...a11yProps(2)} />
