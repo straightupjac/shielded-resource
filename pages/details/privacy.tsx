@@ -29,7 +29,7 @@ const Privacy: NextPage = () => {
               <Typography variant="body1">
                 There are many reasons why people might need privacy tools. Some people may need them to protect their online activity from being tracked, others may need them to communicate securely, and still others may need them to hide their location. Privacy tools can help people to stay safe online, and to keep their information private.
                 <br /><br />
-                There are many reasons why domestic violence victims and those seeking abortions may need privacy tools. Domestic abuse survivors often have to worry about their online safety as well as their physical safety. In both cases, the individuals may be seeking to escape a dangerous or abusive situation, and may need to keep their location and identity confidential in order to stay safe. Additionally, both groups may be subject to stigma and discrimination, and privacy tools can help them avoid judgement and maintain their dignity.
+                Domestic violence victims and those seeking abortions in particular need privacy tools to protect their safety. Domestic abuse survivors often have to worry about their online safety as well as their physical safety. In both cases, the individuals may be seeking to escape a dangerous or abusive situation, and may need to keep their location and identity confidential in order to stay safe. Additionally, both groups may be subject to stigma and discrimination, and privacy tools can help them avoid judgement and maintain their dignity.
                 One of the best ways to protect yourself online is to make sure your devices are secure. This means creating strong passwords, never sharing passwords with anyone, and being careful about what you post online.
               </Typography>
               <Typography variant="body1">
@@ -123,9 +123,24 @@ const Privacy: NextPage = () => {
                   </li>
                   <li>
                     They could see your targeted ads (this happens via cookies being placed on a website by a third party). These cookies are placed on the website, and often users. <strong>A prime example of this is the Facebook Pixel.</strong>Websites using a Facebook Pixel can track visitor activity on their site, then re-target those same users with ads when they visit Facebook. So if a Facebook Pixel is on a site that you visit, Facebook can add a third-party cookie to your browser and track your behavior in order to serve you with targeted ads the next time you log in to Facebook. And since Facebook maintains such an enormous advertiser network, these trackers can be found just about everywhere on the web.
-
                   </li>
                 </ul>
+                Some key things to look for when accessing sensitive information include:
+                <ul>
+                  <li>
+                    whether the site or app requires a login
+                  </li>
+                  <li>
+                    How the site or app stores information
+                  </li>
+                  <li>
+                    What security measures are in place to protect information
+                  </li>
+                  <li>
+                    Whether the site or app shares information with third parties
+                  </li>
+                </ul>
+                Some of these things are easier to identify and investigate that others, but it is good to be mindful of how the websites you visit are tracking your information.
               </Typography>
               <Typography variant="h2">
                 How we can facilitate privacy for vulnerable populations

@@ -30,7 +30,7 @@ const helpResources: NextPage = () => {
                                 <Link passHref href='/details/manifesto'>
                                     <div className={styles.card}>
                                         <h2>Manifesto &rarr;</h2>
-                                        <p>Our motivation behind this project.</p>
+                                        <p>The motivation behind this resource.</p>
                                     </div>
                                 </Link>
                                 <Link passHref href='/details/privacy'>
