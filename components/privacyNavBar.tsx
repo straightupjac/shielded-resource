@@ -1,14 +1,9 @@
-import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Stack from "@mui/material/Stack";
-import HideOnScroll from "@components/hideOnScroll";
 import styles from '@styles/header.module.css';
-import Image from 'next/image';
-import { useState } from 'react'
 import Link from "next/link";
-import { Button } from "@mui/material";
-import { useRouter } from 'next/router'
+import { Block } from "@mui/icons-material";
+import { Box, Grid } from "@mui/material";
 
 export const navLinks = [
   { title: 'home', path: '/' },
@@ -16,34 +11,27 @@ export const navLinks = [
 ];
 
 const PrivacyNavBar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const history = useRouter();
-
-  function handleSearchBarChange(event: any) {
-    setSearchQuery(event.target.value);
-  }
-
-  function handleSearchSubmit(event: any) {
-    event.preventDefault();
-    if (searchQuery.toLowerCase() === "help") {
-      history.push("/details");
-    }
-  }
-
   return (
     <>
-      <Toolbar
-        component="nav"
-        sx={{
-          display: { xs: `none`, md: `flex` },
-        }}
-      >
-        <Stack direction="row" spacing={4} alignItems="center">
+      <Toolbar>
+        <Stack
+          direction={{ sm: "row" }}
+          display={{ xs: 'none', sm: 'block' }}
+          width='100%'
+          spacing={4}
+          alignItems="center"
+        >
+          <Link passHref href="/details">
+            <span className={styles.link}>Resources Home</span>
+          </Link>
           <Link passHref href="/details/manifesto">
             <span className={styles.link}>Manifesto</span>
           </Link>
           <Link passHref href="/details/privacy">
             <span className={styles.link}>Privacy Resources</span>
+          </Link>
+          <Link passHref href="/details/action-items">
+            <span className={styles.link}>Action Items</span>
           </Link>
           <Link passHref href="/details/ethical-design">
             <span className={styles.link}>Ethical Design Plan</span>
@@ -53,6 +41,41 @@ const PrivacyNavBar = () => {
           </Link>
         </Stack>
       </Toolbar>
+      <Box>
+        <Grid
+          display={{ xs: 'grid', sm: 'none' }}
+          container
+          spacing={2}
+          paddingBottom={3}
+          rowGap={1}
+        >
+          <Grid item>
+            <Link passHref href="/details">
+              <span className={styles.link}>Resources Home</span>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link passHref href="/details/manifesto">
+              <span className={styles.link}>Manifesto</span>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link passHref href="/details/privacy">
+              <span className={styles.link}>Privacy Resources</span>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link passHref href="/details/ethical-design">
+              <span className={styles.link}>Ethical Design Plan</span>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link passHref href="/details/ecosystem">
+              <span className={styles.link}>Ecosystem Research</span>
+            </Link>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

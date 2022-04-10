@@ -1,4 +1,5 @@
 .quick_leave_button {
+    position: fixed;
     color: white;
     cursor: pointer;
     background-color: red;
@@ -7,11 +8,12 @@
     height: 120px;
     display: inline-block;
     border-radius: 5px;
+    margin: 10px;
 }
 
 .quick_leave_button_container {
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 20px;
 }
 
 .leave_text {
@@ -44,4 +46,23 @@
 .description_text {
     text-align: center;
 
+}
+
+@media (max-width: 600px) {
+    .quick_leave_button {
+        height: 40px;
+        width: 150px;
+    }
+
+    .leave_text {
+        width: 150px;
+        padding-top: 7px;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-weight: 600;
+        letter-spacing: .3rem;
+    }
 }

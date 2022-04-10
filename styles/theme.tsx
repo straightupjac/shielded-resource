@@ -3,15 +3,13 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 // Create a theme instance.
 let theme = createTheme({
   palette: {
-    primary: {
-      main: '#88b1b1',
-    },
     secondary: {
       main: '#cdeafe',
     },
   },
   typography: {
     fontFamily: [
+      'Raleway',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -24,9 +22,9 @@ let theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontSize: '6rem',
+      fontSize: '4rem',
       fontWeight: 500,
-      color: '#40424a',
+      color: '#137dc5',
       '@media only screen and (max-width: 900px)': {
         fontSize: '3rem',
       },
@@ -34,6 +32,21 @@ let theme = createTheme({
         fontSize: '2rem',
       }
     },
+    h2: {
+      fontSize: '3rem',
+      fontWeight: 500,
+      '@media only screen and (max-width: 900px)': {
+        fontSize: '2.5rem',
+      },
+      '@media only screen and (max-width: 600px)': {
+        fontSize: '2rem',
+      }
+    },
+    body1: {
+      fontSize: '1.15rem',
+      fontWeight: 400,
+      lineHeight: '1.5',
+    }
   },
 });
 

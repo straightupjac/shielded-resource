@@ -1,27 +1,30 @@
-.main {
-  min-height: 100vh;
-  flex: 2;
+.recipeBox {
+  min-height: 70vh;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   color: #137dc5;
 }
 
 .reviews {
   display: flex;
-  padding-bottom: 250px;
-  padding-left: 150px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .review_count {
-  margin-top: 1px;
   margin-left: 5px;
   text-decoration: underline;
 }
 
 .recipe {
   padding-left: 50px;
+}
+
+.left_col {
+  min-width: 40%;
 }
 
 .ingredient_list {
@@ -56,4 +59,27 @@
   font-weight: bold;
   padding: 3px 8px;
   border-radius: 90px;
+}
+
+@media (max-width: 600px) {
+  .recipeBox {
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    color: #137dc5;
+  }
+
+  .recipe {
+    padding-left: 5px;
+  }
+
+  .ingredient_bullet {
+    overflow: hidden;
+  }
+
+  .ingredient {
+    margin-top: 1px;
+    margin-left: 2px;
+  }
 }

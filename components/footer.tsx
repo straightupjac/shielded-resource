@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import styles from '@styles/Home.module.css';
 import Typography from '@mui/material/Typography';
 import { Stack } from "@mui/material";
+import styles from '@styles/footer.module.css'
 
 const Footer = () => {
   return (
@@ -13,18 +13,8 @@ const Footer = () => {
         alignItems="center"
         spacing={4}
       >
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
         <Typography >
-          © {new Date().getFullYear()}
+          Made with 💜 © {new Date().getFullYear()}
         </Typography>
       </Stack>
     </Box>);
