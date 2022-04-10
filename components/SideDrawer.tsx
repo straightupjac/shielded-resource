@@ -6,16 +6,9 @@ import Menu from "@mui/icons-material/Menu";
 import Stack from "@mui/material/Stack";
 import styles from '@styles/header.module.css';
 import { ChangeEventHandler, MouseEventHandler, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
-type SideDrawerProps = {
-  handleSearchSubmit: MouseEventHandler<HTMLFormElement>;
-  handleSearchBarChange: ChangeEventHandler<HTMLInputElement>;
-  searchQuery: string;
-}
-
-const SideDrawer = ({ handleSearchSubmit, searchQuery, handleSearchBarChange }: SideDrawerProps) => {
+const SideDrawer = () => {
   const [state, setState] = useState({
     right: false,
   });
@@ -47,18 +40,6 @@ const SideDrawer = ({ handleSearchSubmit, searchQuery, handleSearchBarChange }: 
             textTransform: 'none',
           }}
         >
-          <form className={styles.search} onClick={handleSearchSubmit}>
-            <input
-              className={styles.search_bar}
-              value={searchQuery}
-              type="text"
-              placeholder="Search.."
-              name="search"
-              onChange={handleSearchBarChange} />
-            <button className={styles.search_button} type="submit">
-              <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
-            </button>
-          </form>
           <Link passHref href="/contact">
             <span className={styles.link}>Contact</span>
           </Link>

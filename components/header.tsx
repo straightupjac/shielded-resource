@@ -7,7 +7,7 @@ import styles from '@styles/header.module.css';
 import Image from 'next/image';
 import { useState } from 'react'
 import Link from "next/link";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useRouter } from 'next/router'
 import SideDrawer from "./SideDrawer";
 
@@ -59,8 +59,18 @@ const Header = () => {
                 }}
               >
                 <Stack direction="row" spacing={4} alignItems="center">
-                  <form className={styles.search} onClick={handleSearchSubmit}>
-                    <input className={styles.search_bar} value={searchQuery} type="text" placeholder="Search.." name="search" onChange={handleSearchBarChange} />
+                  <form
+                    className={styles.search}
+                    onClick={handleSearchSubmit}
+                  >
+                    <input
+                      className={styles.search_bar}
+                      value={searchQuery}
+                      type="text"
+                      placeholder="Search.."
+                      name="search"
+                      onChange={handleSearchBarChange}
+                    />
                     <button className={styles.search_button} type="submit">
                       <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
                     </button>
@@ -83,15 +93,27 @@ const Header = () => {
                 </Stack>
               </Toolbar>
               {/* for mobile view */}
-              <SideDrawer
-                handleSearchSubmit={handleSearchSubmit}
-                handleSearchBarChange={handleSearchBarChange}
-                searchQuery={searchQuery}
-              />
+              <SideDrawer />
             </Container>
           </Toolbar>
         </AppBar>
       </HideOnScroll >
+      <Box sx={{
+        display: { xs: 'block', md: `none` },
+      }}>
+        <form className={styles.search} onClick={handleSearchSubmit} >
+          <input
+            className={styles.search_bar}
+            value={searchQuery}
+            type="text"
+            placeholder="Search..."
+            name="search"
+            onChange={handleSearchBarChange} />
+          <button className={styles.search_button} type="submit">
+            <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
+          </button>
+        </form>
+      </Box>
     </>
   );
 };
