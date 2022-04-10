@@ -75,6 +75,9 @@ const EthicalDesign: NextPage = () => {
                     <li>
                       To further enhance security, users are given the option to create an OTP (one-time-pass) for the sensitve parts of this site to ensure other users on their device will not accidentally stumble upon it.
                     </li>
+                    <li>
+                      This {`website's`} metadata and SEO tags were intentionally set to represent a recipe/cooking website to mislead the browser history preview. This was a tradeoff we decided to make with regards to discoverability vs. user safety.
+                    </li>
                   </ul>
                 </Typography>
               </div>
