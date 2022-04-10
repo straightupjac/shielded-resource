@@ -13,9 +13,8 @@ const Footer = () => {
         alignItems="center"
         spacing={4}
       >
-        Made with 💜
         <Typography >
-          © {new Date().getFullYear()}
+          Made with 💜 © {new Date().getFullYear()}
         </Typography>
       </Stack>
     </Box>);

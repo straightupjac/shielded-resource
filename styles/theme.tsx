@@ -12,6 +12,7 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: [
+      'Raleway',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -46,6 +47,8 @@ let theme = createTheme({
     },
     body1: {
       fontSize: '1.15rem',
+      fontWeight: 400,
+      lineHeight: '1.5',
     }
   },
 });

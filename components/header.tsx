@@ -10,6 +10,7 @@ import Link from "next/link";
 import { Box, Button } from "@mui/material";
 import { useRouter } from 'next/router'
 import SideDrawer from "./SideDrawer";
+import SearchIcon from '@mui/icons-material/Search';
 
 export const navLinks = [
   { title: 'home', path: '/' },
@@ -48,7 +49,7 @@ const Header = () => {
             >
               <Link passHref href="/">
                 <Button onClick={clearAuth}>
-                  <Image alt="fresh meal logo" src="/logo.png" width={190} height={70} />
+                  <Image alt="fresh meal logo" src="/logo.svg" width={190} height={70} />
                 </Button>
               </Link>
               {/* for desktop view */}
@@ -73,7 +74,7 @@ const Header = () => {
                       onChange={handleSearchBarChange}
                     />
                     <button className={styles.search_button} type="submit">
-                      <Image alt="a looking glass image for search" src="/search.png" width={20} height={20} />
+                      <SearchIcon color="secondary" />
                     </button>
                   </form>
                   <Link passHref href="/contact">

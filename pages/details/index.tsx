@@ -13,7 +13,7 @@ const HelpResources: NextPage = () => {
             <Head>
                 <title>Fresh Meal</title>
                 <meta name="description" content="Quick and easy recipes for the modern family." />
-                <link rel="icon" type="image/png" href="small-logo.png" />
+                <link rel="icon" type="image/png" href="small-logo.svg" />
             </Head>
             <RouteGuard>
                 <>
