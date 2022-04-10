@@ -60,6 +60,7 @@ const Header = () => {
               >
                 <Stack direction="row" spacing={4} alignItems="center">
                   <form
+                    autoComplete="off"
                     className={styles.search}
                     onClick={handleSearchSubmit}
                   >

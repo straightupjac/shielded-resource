@@ -78,6 +78,9 @@ const EthicalDesign: NextPage = () => {
                     <li>
                       This {`website's`} metadata and SEO tags were intentionally set to represent a recipe/cooking website to mislead the browser history preview. This was a tradeoff we decided to make with regards to discoverability vs. user safety.
                     </li>
+                    <li>
+                      Autocomplete on the search field is turned off to prevent history of the {`'help'`} command being trackable.
+                    </li>
                   </ul>
                 </Typography>
               </div>
