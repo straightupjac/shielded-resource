@@ -8,43 +8,56 @@ import { Container, Dialog, DialogActions, DialogContent, DialogContentText, Dia
 import ReactCodeInput from 'react-code-input'
 import { RouteGuard } from '@components/routeGuard'
 
+const FRESH_MEAL_CLIENT_ID_ASSIGNED = "freshmealclientidassigned"
+const FRESH_MEAL_CLIENT_ID = "freshmealclientid"
+
 const HelpResources: NextPage = () => {
-    const visitedBeforeKey = "freshmealhelpvisited"
-    const passcodeKey = "freshmealpasscode"
     const [loaded, setLoaded] = useState(false)
-    const [openCodeDialog, setOpenCodeDialog] = useState(false)
-    const [firstTimeCode, setFirstTimeCode] = useState("")
+    const [openIdDialog, setOpenIdDialog] = useState(false)
+    const [clientId, setClentId] = useState("")
     const [alertDialogMessage, setAlertDialogMessage] = useState("")
     const [openAlertDialog, setOpenAlertDialog] = useState(false)
-    const [authenticated, setAuthenticated] = useState(false)
+    const [refreshed, setRefreshed] = useState(false)
 
-    function closeCodeDialog() {
-        setOpenCodeDialog(false)
+    function closeIdDialog() {
+        setOpenIdDialog(false)
     }
 
-    function savePasscode() {
-        closeCodeDialog()
-        if (firstTimeCode == null) return
+    function unassignClientId() {
+        setClentId("nullna")
+        saveClientId()
+    }
+
+    function resetClientId() {
+        setOpenIdDialog(true)
+    }
+
+    function saveClientId() {
+        closeIdDialog()
+        if (clientId == null || clientId.length != 6) return
         try {
-            localStorage.setItem(passcodeKey, firstTimeCode)
-            localStorage.setItem(visitedBeforeKey, "true")
+            localStorage.setItem(FRESH_MEAL_CLIENT_ID, clientId)
+            localStorage.setItem(FRESH_MEAL_CLIENT_ID_ASSIGNED, "true")
             setAlertDialogMessage("On your next visit, you will be shown a 404 page. Just type in your code on the keyboard to be granted access. No prompts will be shown to signal this to keep the page's real content a secret.")
         } catch (error) {
-            localStorage.removeItem(visitedBeforeKey)
+            localStorage.removeItem(FRESH_MEAL_CLIENT_ID_ASSIGNED)
             setAlertDialogMessage("We couldn't save your code. Please try again.")
         }
         setOpenAlertDialog(true)
     }
 
     useEffect(function() {
-        if(window.localStorage.getItem(visitedBeforeKey) == "true") {
-            let codeUntilNow = ""
+        if(window.localStorage.getItem(FRESH_MEAL_CLIENT_ID_ASSIGNED) == "true") {
+            let idUntilNow = ""
+            const savedId = window.localStorage.getItem(FRESH_MEAL_CLIENT_ID)
+            if (savedId == null) return
+            if (savedId == "nullna") {
+                setRefreshed(true)
+            }
             const eventListener = (e: KeyboardEvent) => {
-                const savedCode = window.localStorage.getItem(passcodeKey)
-                if (savedCode == null) return
-                codeUntilNow = codeUntilNow.concat(e.key)
-                if (codeUntilNow.length >= 6 && codeUntilNow.endsWith(savedCode)) {
-                    setAuthenticated(true)
+                idUntilNow = idUntilNow.concat(e.key)
+                if (idUntilNow.length >= 6 && idUntilNow.endsWith(savedId)) {
+                    setRefreshed(true)
                 }
             }
             window.addEventListener('keydown', eventListener)
@@ -52,8 +65,8 @@ const HelpResources: NextPage = () => {
                 window.removeEventListener('keydown', eventListener)
             }
         } else {
-            setAuthenticated(true)
-            setOpenCodeDialog(true)
+            setRefreshed(true)
+            setOpenIdDialog(true)
         }
     },[loaded]);
 
@@ -64,7 +77,7 @@ const HelpResources: NextPage = () => {
                 <meta name="description" content="Quick and easy recipes for the modern family." />
                 <link rel="icon" type="image/png" href="small-logo.svg" />
             </Head>
-            {authenticated ? 
+            {refreshed ? 
             <RouteGuard>
                 <>
                     <div className={styles.escapePanel}>
@@ -112,19 +125,24 @@ const HelpResources: NextPage = () => {
                                         <p>We researched further resources so you {`don't`} have to.</p>
                                     </div>
                                 </Link>
+                                <div className={styles.card} onClick={resetClientId}>
+                                    <h2>Change code &rarr;</h2>
+                                    <p>Setup or change your access code.</p>
+                                </div>
                             </div>
                         </main>
                     </Container>
-                    <Dialog open={openCodeDialog} onClose={closeCodeDialog}>
+                    <Dialog open={openIdDialog} onClose={closeIdDialog}>
                         <DialogTitle>Setup a 6-digit access Code</DialogTitle>
                         <DialogContent>
                             <DialogContentText>
-                            To be able to access this page in subsequent visits, you need to set a 6 digit number-only code.
+                            To secure access to this page in subsequent visits, you have an option to set a 6-digit numberic code.
                             </DialogContentText>
-                            <ReactCodeInput type='number' fields={6} inputMode='verbatim' name='passcodefield' onChange={(value) => setFirstTimeCode(value) } />
+                            <ReactCodeInput type='number' fields={6} inputMode='verbatim' name='passcodefield' onChange={(value) => setClentId(value) } />
                         </DialogContent>
                         <DialogActions>
-                        <Button onClick={savePasscode}>Save</Button>
+                        <Button onClick={unassignClientId}>{`Don't ask again`}</Button>    
+                        <Button onClick={saveClientId}>Save</Button>
                         </DialogActions>
                     </Dialog>
                     <Dialog open={openAlertDialog} onClose={() => setOpenAlertDialog(false)}>

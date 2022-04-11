@@ -18,7 +18,7 @@ function QuickLeaveButton() {
                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <span className={styles.description_box}>
                         <span className={styles.description_text}>
-                            Return to the recipe page by clicking this button
+                            Click here to return to the recipe cover.
                         </span>
                     </span>
                 </Box>
