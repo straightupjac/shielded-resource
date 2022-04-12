@@ -39,8 +39,9 @@ _In the future: before this tool can be deployed (and if we had more time to fol
 * **Iterate**: We would use the feedback from our usability tests to iterate on the tool until we've ensured that our tool does not add more harm than it helps. This includes forecasting user groups whow might not have been considered in our initial personas, and those who migh misuse our tool for harm. 
 
 ## roadblocks 🚧 
-* Finding users: 
-* Balancing time between user research and development research:
+#### As CS students trying to build an ethical tool, we ran into interesting roadblocks when trying to do justice to our ethical design steps:
+* **Finding Vulnerable Users:** We weren't able to find actual members of our target user group, and had to instead discuss their issues with individuals who would be as close to understanding the privacy issues faced by vulnerable groups as possible. When talking to TK from the Shore Centre, we were able to understand that very few individuals who accesss its resources are ever willing to participate in post-experience follow-ups, surveys, or user discussions, as these can be highly traumatic experiences to relive. The Shore Centre can never gain participants for these studies without offering financial compensation, and even then this is hard. This demonstrates a barrier that computer scientists will face in building tools for vulnerable poppulations - if there is not enough money, care and support allocated to conducting user research, 
+* **Balancing time between user research and development research:
 
 ## highlights of our tool ✨
 #### We practiced user-centred design by ensuring that all features were justified by thorough user research and evaluated for potential harm. Here are some of the design decisions we made when building our tool:
