@@ -12,8 +12,9 @@ This project's goal is to create a **proof of concept site that can help educate
 ## design process  🎨
 #### This tool was built for CS 497, a class that asks us how we can mitigate Discrimination in Computing. Before we built this project, which is targeted at vulnerable user groups, we ensured to research the implications of our project on all stakeholders involved. Here were the steps of our design process:
 
-* **Empathize**: Our first step was asking ourselves how we could ensure that were dealing ethically with a vulnerable population, which started by researching their experience through trauma-informed design. **From our discussions in class, we realized that our empathy was not enough to understand the user's perspective, so we conducted interviews with those who were better informed on the user group we were targeting.**
+* **Empathize**: Our first step was asking ourselves how we could ensure that were dealing ethically with a vulnerable population, which started by researching their experience through trauma-informed design. **From our discussions in class, we realized that our empathy was not enough to understand the user's perspective, so we conducted interviews with those who were better informed on the user group we were targeting. It was imperative to consult with users to ensure that we were creating something they actually need, rather then something that we, developers, think they need.**
   * [User Interview with TK from the Shore Centre](https://docs.google.com/document/d/1KkCDiY0Opcf0RoWc-HqWzN5HbBiDjB0tc-pAJJgfrOc/edit?usp=sharing)
+  * [User Interview with representative from Highland Shors Children's Aid Society](https://docs.google.com/document/d/1ezocF6JDh1E8Mzk-6BlkDBeHT2pnC3OPRjRA54GYTqQ/edit)
   *  [Resources on trauma-informed design](https://cotsonline.org/wp-content/uploads/2018/04/Trauma-Informed-Design.BOD_.pdf) we used to understand the user's rights we should seek to respect when building.
 
 * **Define**: Based on our our research, we were able to define a **list of user rights** and a **set of user priorities** that we used as North Stars to follow throughout our development process. **Creating this list allowed us to avoid a “crash test dummy approach” to building, where we become so attached to the solution that we convince ourselves that we must build the initial tool we sought out to create.**
@@ -41,7 +42,7 @@ _In the future: before this tool can be deployed (and if we had more time to fol
 ## roadblocks 🚧 
 #### As CS students trying to build an ethical tool, we ran into interesting roadblocks when trying to do justice to our ethical design steps:
 * **Finding Vulnerable Users:** We weren't able to find actual members of our target user group, and had to instead discuss their issues with individuals who would be as close to understanding the privacy issues faced by vulnerable groups as possible. When talking to TK from the Shore Centre, we were able to understand that very few individuals who accesss its resources are ever willing to participate in post-experience follow-ups, surveys, or user discussions, as these can be highly traumatic experiences to relive. The Shore Centre can never gain participants for these studies without offering financial compensation, and even then this is hard. This demonstrates a barrier that computer scientists will face in building tools for vulnerable poppulations - if there is not enough money, care and support allocated to conducting user research, 
-* **Balancing time between user research and development research:
+* **Balancing time between user research and development research:** The more user research we conducted, the more problems we wanted to solve. The more we learnt about the troubles our target user group faced, the more we wanted to learn everything that could be done to help them. Unfortunately, there were limits to what we could be reasonably accomplished and there were tough decisions that had to be made in order to optimize the true value of the tool. We had to make sure we had all the research and resources we needed to deliver a meaningful user experience, while still having time to develop everything that that would entail. Ultimately, we decided it is better to provide users with a tool that solved a handful of problems highly effectively, backed by informed research, then one that attempted to solve many problems but failed to deliver users with resources they actually need. 
 
 ## highlights of our tool ✨
 #### We practiced user-centred design by ensuring that all features were justified by thorough user research and evaluated for potential harm. Here are some of the design decisions we made when building our tool:
@@ -49,15 +50,15 @@ _In the future: before this tool can be deployed (and if we had more time to fol
 > Feel free to [run our demo site](https://fresh-meal.vercel.app/) and try these out! 
 
 * The website is **disguised as a meal prep/recipe website.** 
-  * _We chose this "disguise" because it was a common website that it made sense to access frequently by a large user group. This allows the user to fulfill their desire to mask their actions on the internet from people who might be surveilling their search history._
+  * _We chose this "disguise" because it would be a considered a common and innocuous website that would make sense to access frequently by a large user group. This allows the user to fulfill their desire to mask their actions on the internet from people who might be surveilling their search history._
 
 * This website’s **metadata and SEO tags were intentionally set to represent a recipe/cooking website** to mislead the browser history preview. 
-  *   _This design decision was a tradeoff we made  with regard to discoverability vs. user safety, to ensure that a smaller but more targeted user group would safely be able to use our website._
+  *   _This design decision was a tradeoff we made with regard to discoverability vs. user safety, to ensure that a smaller but more targeted user group would safely be able to use our website._
 
 * **Enter help in the search bar** to access our resources
   * _Autocomplete on the search field is turned off to prevent history of the 'help' command from being trackable._
 
-* Users can elect to enter an **OTP (one-time-password)** so that future attempts to access help require an OTP.
+* Users can elect to enter an **OTP (one-time-password)** so that future attempts to access help require an OTP. This means all future attempts to access the hidden resources can be made by entering the OTP in the search bar. 
 
 * The URL for the help page is **not accessible directly**
   * Try entering fresh-meal.vercel.app/details into your browser, it will redirect you back to your main page because of the sessionStorage auth status
