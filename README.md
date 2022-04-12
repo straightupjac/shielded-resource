@@ -58,7 +58,7 @@ _In the future: before this tool can be deployed (and if we had more time to fol
 * **Enter help in the search bar** to access our resources
   * _Autocomplete on the search field is turned off to prevent history of the 'help' command from being trackable._
 
-* Users can elect to enter an **OTP (one-time-password)** so that future attempts to access help require an OTP. This means all future attempts to access the hidden resources can be made by entering the OTP in the search bar. 
+* Users can elect to enter an **OTP (one-time-password)** so that future attempts to access help require an OTP. This means future attempts to access the hidden resources can be made by entering the customized OTP in the search bar. 
 
 * The URL for the help page is **not accessible directly**
   * Try entering fresh-meal.vercel.app/details into your browser, it will redirect you back to your main page because of the sessionStorage auth status
