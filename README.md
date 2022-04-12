@@ -46,6 +46,8 @@ _In the future: before this tool can be deployed (and if we had more time to fol
 ## highlights of our tool ✨
 #### We practiced user-centred design by ensuring that all features were justified by thorough user research and evaluated for potential harm. Here are some of the design decisions we made when building our tool:
 
+> Feel free to [run our demo site](https://fresh-meal.vercel.app/) and try these out! 
+
 * The website is **disguised as a meal prep/recipe website.** 
   * _We chose this "disguise" because it was a common website that it made sense to access frequently by a large user group. This allows the user to fulfill their desire to mask their actions on the internet from people who might be surveilling their search history._
 
