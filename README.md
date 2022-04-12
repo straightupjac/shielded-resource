@@ -5,7 +5,27 @@ This project's goal is to create a **proof of concept site that can help educate
 
 > This tool can also be helpful for other technologists who are hoping to gain insight into the concerns of these user groups. Understanding your user's pain points BEFORE building allows you to consider your own biases when designing the tool, rather than leaving ethical design for the post-production, evaluation stage.
 
-## highlights ✨
+## design process  🎨
+#### This tool was built for CS 497, a class on Discrimination in Computing. Before we built this project, which is targeted at vulnerable user groups, we ensured to research the implications of our project on all stakeholders involved. Here were the steps of our design process:
+
+* **Empathize**: Our first step was asking ourselves how we could ensure that were dealing ethically with a vulnerable population, which started by researching their experience through trauma-informed design. **From our discussions in class, we realized that our empathy was not enough to understand the user's perspective, so we conducted interviews with those who were better informed on the user group we were targeting.**
+  * An article on trauma-informed design we used 
+  * [User Interview with TK from the Shore Centre](https://docs.google.com/document/d/1KkCDiY0Opcf0RoWc-HqWzN5HbBiDjB0tc-pAJJgfrOc/edit?usp=sharing)
+
+* **Define**: Based on our our research, we were able to define a **list of user rights** and a **set of user priorities** that we used as North Stars to follow throughout our development process. 
+
+* **Evaluate**: This is an ethical design step that asks us to consider who might negatively be impacted by the creation of our tool, and how we might mitigate that harm. 
+
+* **Ideate**: At this point, we were able to come up with a minimum set of features for our tool. Originally, this looked like a Google Chrome extension that would 
+
+* **Forecast**: what potential problems exist wiht our current solution?
+* Prototype
+
+_In the future: before this tool can be deployed (and if we had more time to follow up with our users), we must:_
+* **Test**: User testing of our tool is **critical** to understanding if they will actually be positively impacted by what we've built. Although our initial discussions informed the features we prioritized, conducting a live usability test is a real way to measure our metrics for success, such as the time it takes users to navigate our website and whether it increases their cognitive load too much. 
+* **Iterate**: We would use the feedback from our usability tests to iterate on the tool until we've ensured that our tool does not add more harm than it helps. This includes forecasting user groups whow might not have been considered in our initial personas, and those who migh misuse our tool for harm. 
+
+## highlights of our tool ✨
 #### We practiced user-centred design by ensuring that all features were justified by thorough user research and evaluated for potential harm. Here are some of the design decisions we made when building our tool:
 
 * The website is **disguised as a meal prep/recipe website.** 
@@ -28,9 +48,6 @@ This project's goal is to create a **proof of concept site that can help educate
 
 * We offer a **quick-leave button** so users can easily navigate away from the page
   * _This was based on the user's key objective when accessing our website being speed, from user discussions with TK about the Choice Connect website from the Shore Centre_
-
-## design process  🎨
-##### This tool was built for CS 497, a class on Discrimination in Computing. Before we built this project, which is targeted at vulnerable user groups, we ensured to research the implications of our project on all stakeholders involved. Here were the steps of our design process:
 
 ## running our project 💻
 Getting started:
