@@ -1,7 +1,4 @@
 # shielded resource 🛡️
-Group project for CS497 (W22)
-with Areena [@akhterare](https://github.com/akhterare), Hannah [@hannahhungerford](https://github.com/hannahhungerford), Jaclyn [@straightupjac](https://github.com/straightupjac) and Padam [@padamchopra](https://github.com/padamchopra)
-
 [Live Demo](https://fresh-meal.vercel.app/)
 
 ## overview  💭 
@@ -84,3 +81,8 @@ npm run dev
 # or
 yarn dev
 ```
+
+enter help in the search bar to start.
+
+Group project for CS497 (W22)
+with Areena [@akhterare](https://github.com/akhterare), Hannah [@hannahhungerford](https://github.com/hannahhungerford), Jaclyn [@straightupjac](https://github.com/straightupjac) and Padam [@padamchopra](https://github.com/padamchopra)
